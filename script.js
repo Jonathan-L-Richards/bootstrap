@@ -1,11 +1,9 @@
 document.querySelector('p').style.color = 'red';
 
-//Web R Initialization
-import('https://webr.r-wasm.org/latest/webr.mjs').then(
-  async ({ WebR }) => {
-    const webR = new WebR();
-    await webR.init();
-  }
-);
-
 console.log(crossOriginIsolated);
+
+//Web R import
+import { WebR } from "https://webr.r-wasm.org/latest/webr.mjs";
+const webR = new WebR();
+await webR.init();
+
